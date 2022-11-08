@@ -5,7 +5,7 @@ import com.ace.soniceweather.domain.Weather
 data class WeatherResponse(val date: String, val fcstValue: String){
 
     companion object{
-        fun of(weather: Weather): WeatherResponse{
+        fun of(weather: WeatherDTO): WeatherResponse{
             return WeatherResponse(weather.date, weather.fcstValue)
         }
     }

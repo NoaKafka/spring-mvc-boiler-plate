@@ -31,7 +31,8 @@ class WeatherContorllerTest @Autowired constructor(
         val weather = Weather("20221104", "Good")
         weatherService.saveWeather(weather.date, weather.fcstValue)
         //when
-        val result = weatherService.getWeather(weather.date)
+        val result = weatherService.getWeather("20221104")
+        val result2 = weatherService.getWeather("20221104")
         //then
         assertThat(result.date).isEqualTo("20221104")
     }
